@@ -1,0 +1,61 @@
+.chart-wrap{
+	position: relative;
+	max-width: 1500px;
+	padding: 50px;
+	margin: 0 auto 50px;
+	.title-box{
+		margin-bottom: 20px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 22px;
+	}
+	button{
+		padding: 8px 25px;
+	}
+}
+#chartjs-tooltip {
+	opacity: 1;
+	position: absolute;
+	padding: 16px 16px 12px;
+	box-shadow: 0px 12px 8px -4px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	background: #FFFFFF;
+	pointer-events: none;
+	text-align: left;
+	transform: translate(-50%, -100%);
+	transition: top 0.2s, left 0.2s, opacity 0.2s;
+	&::after{
+		content: '';
+		position: absolute;
+		top: 98%;
+		left: 50%;
+		width: 10px;
+		height: 10px;
+		background-color: #fff;
+		box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.1);
+		transform: rotate(45deg) translate(-50%, 0);
+	}
+	.tooltip-title{
+		line-height: 18px;
+		font-size: 14px;
+		color: #808080;
+		margin-top: 15px;
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+	.tooltip-content{
+		white-space:nowrap;
+		line-height: 26px;
+		margin-top: 10px;
+		font-size: 18px;
+		color: #282828;
+		font-weight: bold;
+		b{
+			color:#00BC90;
+		}
+		span{
+			font-weight: 400;
+		}
+	}
+}
